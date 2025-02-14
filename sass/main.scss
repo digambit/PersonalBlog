@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Heebo", sans-serif;
+    font-size: 62.5%;
+    min-width: 300px;
+}
+
 $screen-xs-min: 300px;
 $screen-sm-min: 600px;
 $screen-md-min: 960px;
@@ -8,6 +20,7 @@ $screen-md-max: 1152px;
 
 $title-font-weight: 700;
 $title-font-size: 4.4rem;
+$title-font-size-sm: 3.2rem;
 $title-font-line-height: 60px;
 
 $subtitle-font-weight: 500;
@@ -17,58 +30,50 @@ $text-font-size: 1.6rem;
 
 $black: #21243D;
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-family: "Heebo", sans-serif;
-    font-size: 62.5%;
-}
-
 .hero {
-    min-width: $screen-xs-min;
-    max-width: $screen-md-max;
+    width: 100%;
     margin: 0 auto;
     background-color: aqua;
     height: 100%;
-    width: 100%;
 
     .navbar {
         background-color: red;
         display: flex;
-        flex-direction: row;
         justify-content: flex-end;
-        padding-top: 27px;
-        padding-right: 27px;
-        font-weight: $subtitle-font-weight;
-        font-size: $subtitle-font-size;
+        padding-top: 20px;
+        padding-right: 15px;
 
         p {
-            padding-left: 26px;
+            display: none;
+        }
+
+        img {
+            height: 20px;
+            
         }
     }
 
     .hero-content {
         display: flex;
-        flex-direction: row;
-        padding: 130px 150px 70px 150px;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
 
         .hero-text {
-            padding-top: 25px;
-            padding-right: 120px;
-            width: calc(100% - 245px);
+            margin-bottom: 60px;
 
             .hero-title {
-                font-size: $title-font-size;
-                padding-bottom: 40px;
+                font-size: $title-font-size-sm;
+                padding-top: 40px;
+                padding-bottom: 15px;
+                text-align: center;
             }
 
             .hero-subtitle {
                 font-size: $text-font-size;
-                padding-bottom: 40px;
+                text-align: center;
+                padding-bottom: 30px;
             }
 
             .hero-button {
@@ -76,16 +81,145 @@ html {
                 width: fit-content;
                 font-size: $subtitle-font-size;
                 padding: 5px 10px 5px 10px;
+                margin: 0 auto;
             }
         }
 
         .hero-img {
+            margin-top: 45px;
+            background-color: blue;
+            height: 170px;
+            width: 170px;
+            
+            img {
+                border-radius: 150px;
+            }
+        }
+    }
+}
+
+@mixin xs {
+    @media screen and (max-width: #{$screen-xs-max}) {
+        @content;
+    }
+}
+
+
+@include xs {
+    .hero {
+        max-width: $screen-xs-max;
+    }
+}
+
+@mixin sm {
+    @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+@include sm {
+.hero {
+        max-width: $screen-sm-max;
+
+        .navbar {
+            flex-direction: row;
+            padding-top: 27px;
+            padding-right: 27px;
+            font-weight: $subtitle-font-weight;
+            font-size: $subtitle-font-size;
+    
+            p {
+                display: block;
+                padding-left: 26px;
+            }
+
+            img {
+                display: none;
+                
+            }
+        }
+
+        .hero-content {
+            padding: 25px 50px 25px 50px;
+
+            .hero-img {
+                height: 245px;
+                width: 245px;
+                
+                img {
+                    border-radius: 150px;
+                }
+            }
+        }
+    }
+}
+
+@mixin md {
+    @media screen and (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@include md {
+.hero {
+    max-width: $screen-md-max;
+
+    .navbar {
+        padding-top: 27px;
+        padding-right: 27px;
+        font-weight: $subtitle-font-weight;
+        font-size: $subtitle-font-size;
+
+        p {
+            display: block;
+            padding-left: 26px;
+        }
+
+        img {
+            display: none;  
+        }
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        padding: 70px 150px 70px 150px;
+
+        .hero-text {
+            padding-right: 120px;
+            width: calc(100% - 245px);
+            margin-bottom: 0px;
+
+            .hero-title {
+                font-size: $title-font-size;
+                padding-bottom: 40px;
+                text-align: left;
+            }
+
+            .hero-subtitle {
+                font-size: $text-font-size;
+                padding-bottom: 40px;
+                text-align: left;
+            }
+
+            .hero-button {
+                background-color: red;
+                width: fit-content;
+                font-size: $subtitle-font-size;
+                padding: 5px 10px 5px 10px;
+                margin: 0;
+            }
+        }
+
+        .hero-img {
+            margin-top: 0px;
             background-color: blue;
             height: 245px;
             width: 245px;
             
             img {
                 border-radius: 150px;
+                }
             }
         }
     }
