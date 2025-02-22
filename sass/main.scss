@@ -1,34 +1,19 @@
+@use './_variables.scss' as *;
+@use './mixins' as *;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
+
 html {
     font-family: "Heebo", sans-serif;
     font-size: 62.5%;
     min-width: 300px;
 }
-
-$screen-xs-min: 300px;
-$screen-sm-min: 600px;
-$screen-md-min: 960px;
-
-$screen-xs-max: 599px;
-$screen-sm-max: 959px;
-$screen-md-max: 1152px;
-
-$title-font-weight: 700;
-$title-font-size: 4.4rem;
-$title-font-size-sm: 3.2rem;
-$title-font-line-height: 60px;
-
-$subtitle-font-weight: 500;
-$subtitle-font-size: 2rem;
-
-$text-font-size: 1.6rem;
-
-$black: #21243D;
 
 .hero {
     width: 100%;
@@ -49,7 +34,7 @@ $black: #21243D;
 
         img {
             height: 20px;
-            
+
         }
     }
 
@@ -90,35 +75,19 @@ $black: #21243D;
             background-color: blue;
             height: 170px;
             width: 170px;
-            
+
             img {
                 border-radius: 150px;
             }
         }
     }
-}
 
-@mixin xs {
-    @media screen and (max-width: #{$screen-xs-max}) {
-        @content;
-    }
-}
-
-
-@include xs {
-    .hero {
+    @include xs {
         max-width: $screen-xs-max;
     }
-}
 
-@mixin sm {
-    @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
-        @content;
-    }
-}
+    @include sm {
 
-@include sm {
-.hero {
         max-width: $screen-sm-max;
 
         .navbar {
@@ -127,7 +96,7 @@ $black: #21243D;
             padding-right: 27px;
             font-weight: $subtitle-font-weight;
             font-size: $subtitle-font-size;
-    
+
             p {
                 display: block;
                 padding-left: 26px;
@@ -135,7 +104,7 @@ $black: #21243D;
 
             img {
                 display: none;
-                
+
             }
         }
 
@@ -145,82 +114,75 @@ $black: #21243D;
             .hero-img {
                 height: 245px;
                 width: 245px;
-                
+
                 img {
                     border-radius: 150px;
                 }
             }
         }
     }
-}
 
-@mixin md {
-    @media screen and (min-width: #{$screen-md-min}) {
-        @content;
-    }
-}
+    @include md {
+        max-width: $screen-md-max;
 
-@include md {
-.hero {
-    max-width: $screen-md-max;
+        .navbar {
+            padding-top: 27px;
+            padding-right: 27px;
+            font-weight: $subtitle-font-weight;
+            font-size: $subtitle-font-size;
 
-    .navbar {
-        padding-top: 27px;
-        padding-right: 27px;
-        font-weight: $subtitle-font-weight;
-        font-size: $subtitle-font-size;
-
-        p {
-            display: block;
-            padding-left: 26px;
-        }
-
-        img {
-            display: none;  
-        }
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: row;
-        padding: 70px 150px 70px 150px;
-
-        .hero-text {
-            padding-right: 120px;
-            width: calc(100% - 245px);
-            margin-bottom: 0px;
-
-            .hero-title {
-                font-size: $title-font-size;
-                padding-bottom: 40px;
-                text-align: left;
+            p {
+                display: block;
+                padding-left: 26px;
             }
 
-            .hero-subtitle {
-                font-size: $text-font-size;
-                padding-bottom: 40px;
-                text-align: left;
-            }
-
-            .hero-button {
-                background-color: red;
-                width: fit-content;
-                font-size: $subtitle-font-size;
-                padding: 5px 10px 5px 10px;
-                margin: 0;
-            }
-        }
-
-        .hero-img {
-            margin-top: 0px;
-            background-color: blue;
-            height: 245px;
-            width: 245px;
-            
             img {
-                border-radius: 150px;
+                display: none;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: row;
+            padding: 70px 150px 70px 150px;
+
+            .hero-text {
+                padding-right: 120px;
+                width: calc(100% - 245px);
+                margin-bottom: 0px;
+
+                .hero-title {
+                    font-size: $title-font-size;
+                    padding-bottom: 40px;
+                    text-align: left;
+                }
+
+                .hero-subtitle {
+                    font-size: $text-font-size;
+                    padding-bottom: 40px;
+                    text-align: left;
+                }
+
+                .hero-button {
+                    background-color: red;
+                    width: fit-content;
+                    font-size: $subtitle-font-size;
+                    padding: 5px 10px 5px 10px;
+                    margin: 0;
+                }
+            }
+
+            .hero-img {
+                margin-top: 0px;
+                background-color: blue;
+                height: 245px;
+                width: 245px;
+
+                img {
+                    border-radius: 150px;
                 }
             }
         }
     }
+
 }
