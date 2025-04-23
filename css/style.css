@@ -41,6 +41,7 @@ html {
 }
 .hero .hero-content .hero-text .hero-title {
   font-size: 3.2rem;
+  font-weight: 700;
   padding-top: 40px;
   padding-bottom: 15px;
   text-align: center;
@@ -152,6 +153,58 @@ html {
   }
   .hero .hero-content .hero-img img {
     border-radius: 150px;
+  }
+}
+
+.posts {
+  width: 100%;
+  margin: 0 auto;
+  background-color: pink;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.posts .posts-head {
+  display: flex;
+  width: 100%;
+  padding-bottom: 25px;
+  background-color: antiquewhite;
+}
+.posts .posts-head .posts-title {
+  font-size: 2.2rem;
+  width: 50%;
+}
+.posts .posts-head .posts-subtitle {
+  font-size: 1.6rem;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.posts .recent-posts {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  padding-left: 20px;
+}
+.posts .recent-posts .post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.posts .recent-posts .post-info {
+  font-size: 2rem;
+  padding-bottom: 30px;
+}
+.posts .recent-posts .post-description {
+  font-size: 1.6rem;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 960px) {
+  .posts {
+    max-width: 1152px;
+    display: flex;
+    padding: 25px 150px 70px 150px;
   }
 }
 
