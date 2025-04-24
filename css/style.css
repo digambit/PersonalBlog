@@ -217,37 +217,72 @@ html {
 
 .portfolio {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   background-color: cadetblue;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 .portfolio .portfolio-head {
-  display: flex;
-  width: 100%;
   padding-bottom: 25px;
   background-color: antiquewhite;
   font-size: 2.2rem;
 }
 .portfolio .recent-work {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: aquamarine;
 }
-.portfolio .recent-work .post-title {
-  font-size: 2.6rem;
+.portfolio .recent-work .case {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.portfolio .recent-work .case-img {
+  background-color: blue;
+}
+.portfolio .recent-work .case-img .image {
+  background-size: cover;
+  border-radius: 6px;
+  height: 180px;
+  width: 246px;
+}
+.portfolio .recent-work .case-text {
+  background-color: yellow;
+  padding-left: 20px;
+}
+.portfolio .recent-work .case-title {
+  font-size: 3rem;
   font-weight: 700;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
-.portfolio .recent-work .post-info {
+.portfolio .recent-work .case-info {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.portfolio .recent-work .case-info .case-date {
   font-size: 1.8rem;
-  padding-bottom: 30px;
+  background-color: pink;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 700;
 }
-.portfolio .recent-work .post-description {
+.portfolio .recent-work .case-info .case-tag {
+  font-size: 2rem;
+  padding-left: 20px;
+}
+.portfolio .recent-work .case-description {
   font-size: 1.6rem;
-  padding-bottom: 20px;
+}
+.portfolio .recent-work .divider {
+  width: 100%;
+  height: 2px;
+  margin: 0 auto;
+  background-color: black;
 }
 @media screen and (min-width: 960px) {
   .portfolio {
