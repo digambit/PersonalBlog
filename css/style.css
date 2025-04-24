@@ -184,27 +184,76 @@ html {
   display: flex;
   flex-direction: row;
   background-color: aquamarine;
+}
+.posts .recent-posts .post1 {
   padding-left: 20px;
+  margin-right: 20px;
+}
+.posts .recent-posts .post2 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .posts .recent-posts .post-title {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 .posts .recent-posts .post-info {
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-bottom: 30px;
 }
 .posts .recent-posts .post-description {
   font-size: 1.6rem;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 960px) {
   .posts {
     max-width: 1152px;
     display: flex;
-    padding: 25px 150px 70px 150px;
+    padding: 25px 150px 25px 150px;
+  }
+}
+
+.portfolio {
+  width: 100%;
+  margin: 0 auto;
+  background-color: cadetblue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio .portfolio-head {
+  display: flex;
+  width: 100%;
+  padding-bottom: 25px;
+  background-color: antiquewhite;
+  font-size: 2.2rem;
+}
+.portfolio .recent-work {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+}
+.portfolio .recent-work .post-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.portfolio .recent-work .post-info {
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+}
+.portfolio .recent-work .post-description {
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 960px) {
+  .portfolio {
+    max-width: 1152px;
+    display: flex;
+    padding: 25px 150px 25px 150px;
   }
 }
 

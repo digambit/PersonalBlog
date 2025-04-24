@@ -206,7 +206,7 @@ html {
         }
     
         .posts-subtitle {
-            font-size: $text-font-size;
+            font-size: 1.6rem;
             width: 50%;
             display: flex;
             justify-content: flex-end;
@@ -217,29 +217,90 @@ html {
         display: flex;
         flex-direction: row;
         background-color: aquamarine;
-        padding-left: 20px;
+
+        .post1 {
+            padding-left: 20px;
+            margin-right: 20px;
+        }
+        .post2 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
 
         .post-title {
-            font-size: $subtitle-font-size;
+            font-size: 2.6rem;
             font-weight: $title-font-weight;
-            padding-top: 30px;
-            padding-bottom: 40px;
+            padding-top: 20px;
+            padding-bottom: 30px;
         }
 
         .post-info {
-            font-size: $subtitle-font-size;
+            font-size: 1.8rem;
             padding-bottom: 30px;
         }
 
         .post-description {
             font-size: $text-font-size;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
         }
     }
 
     @include md {
         max-width: $screen-md-max;
         display: flex;
-        padding: 25px 150px 70px 150px;
+        padding: 25px 150px 25px 150px;
+    }
+}
+
+.portfolio {
+    width: 100%;
+    margin: 0 auto;
+    background-color: cadetblue;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .portfolio-head {
+        display: flex;
+        width: 100%;
+        padding-bottom: 25px;
+        background-color: antiquewhite;
+        font-size: 2.2rem;
+    }
+
+    .recent-work {
+        display: flex;
+        flex-direction: row;
+        background-color: aquamarine;
+
+        .case-img {
+
+        }
+        .case-text {
+
+        }
+
+        .post-title {
+            font-size: 2.6rem;
+            font-weight: $title-font-weight;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .post-info {
+            font-size: 1.8rem;
+            padding-bottom: 30px;
+        }
+
+        .post-description {
+            font-size: $text-font-size;
+            padding-bottom: 20px;
+        }
+    }
+
+    @include md {
+        max-width: $screen-md-max;
+        display: flex;
+        padding: 25px 150px 25px 150px;
     }
 }
