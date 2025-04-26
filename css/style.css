@@ -224,9 +224,20 @@ html {
   flex-direction: column;
 }
 .portfolio .portfolio-head {
+  display: flex;
+  width: 100%;
   padding-bottom: 25px;
   background-color: antiquewhite;
+}
+.portfolio .portfolio-head .portfolio-title {
   font-size: 2.2rem;
+  width: 50%;
+}
+.portfolio .portfolio-head .portfolio-subtitle {
+  font-size: 1.6rem;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
 }
 .portfolio .recent-work {
   display: flex;
@@ -249,7 +260,6 @@ html {
   width: 246px;
 }
 .portfolio .recent-work .case-text {
-  background-color: yellow;
   padding-left: 20px;
 }
 .portfolio .recent-work .case-title {
