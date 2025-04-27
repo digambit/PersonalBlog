@@ -13,13 +13,11 @@ html {
 .hero {
   width: 100%;
   margin: 0 auto;
-  background-color: aqua;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 .hero .navbar {
-  background-color: red;
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
@@ -54,15 +52,16 @@ html {
   padding-bottom: 30px;
 }
 .hero .hero-content .hero-text .hero-button {
-  background-color: red;
   width: fit-content;
   font-size: 2rem;
   padding: 5px 10px 5px 10px;
   margin: 0 auto;
+  font-weight: 500;
+  background-color: lightcoral;
+  border-radius: 20px;
 }
 .hero .hero-content .hero-img {
   margin-top: 45px;
-  background-color: blue;
   height: 170px;
   width: 170px;
 }
@@ -145,7 +144,6 @@ html {
     text-align: left;
   }
   .hero .hero-content .hero-text .hero-button {
-    background-color: red;
     width: fit-content;
     font-size: 2rem;
     padding: 5px 10px 5px 10px;
@@ -153,7 +151,6 @@ html {
   }
   .hero .hero-content .hero-img {
     margin-top: 0px;
-    background-color: blue;
     height: 245px;
     width: 245px;
   }
@@ -165,7 +162,6 @@ html {
 .posts {
   width: 100%;
   margin: 0 auto;
-  background-color: pink;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -174,11 +170,11 @@ html {
   display: flex;
   width: 100%;
   padding-bottom: 25px;
-  background-color: antiquewhite;
 }
 .posts .posts-head .posts-title {
   font-size: 2.2rem;
   width: 50%;
+  font-weight: 500;
 }
 .posts .posts-head .posts-subtitle {
   font-size: 1.6rem;
@@ -189,11 +185,13 @@ html {
 .posts .recent-posts {
   display: flex;
   flex-direction: row;
-  background-color: aquamarine;
 }
 .posts .recent-posts .post {
   padding-left: 20px;
   padding-right: 20px;
+  margin-right: 20px;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 .posts .recent-posts .post-title {
   font-size: 2.6rem;
@@ -241,7 +239,6 @@ html {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: cadetblue;
   display: flex;
   flex-direction: column;
 }
@@ -249,11 +246,11 @@ html {
   display: flex;
   width: 100%;
   padding-bottom: 25px;
-  background-color: antiquewhite;
 }
 .portfolio .portfolio-head .portfolio-title {
   font-size: 2.2rem;
   width: 50%;
+  font-weight: 500;
 }
 .portfolio .portfolio-head .portfolio-subtitle {
   font-size: 1.6rem;
@@ -264,7 +261,6 @@ html {
 .portfolio .recent-work {
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
 }
 .portfolio .recent-work .case {
   display: flex;
@@ -273,7 +269,6 @@ html {
   padding-bottom: 30px;
 }
 .portfolio .recent-work .case-img {
-  background-color: blue;
   display: flex;
   align-items: center;
 }
@@ -300,11 +295,11 @@ html {
 }
 .portfolio .recent-work .case-info .case-date {
   font-size: 1.8rem;
-  background-color: pink;
   border-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 700;
+  background-color: lightgrey;
 }
 .portfolio .recent-work .case-info .case-tag {
   font-size: 2rem;
@@ -366,7 +361,6 @@ footer {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,9 +370,11 @@ footer .logos {
   grid-template-columns: 50px 50px 50px;
   gap: 35px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 footer p {
   font-size: 1.6rem;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
