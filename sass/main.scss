@@ -18,6 +18,8 @@ html {
     margin: 0 auto;
     background-color: aqua;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 
     .navbar {
         background-color: red;
@@ -109,6 +111,11 @@ html {
 
         .hero-content {
             padding: 25px 50px 25px 50px;
+            
+            .hero-text {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
 
             .hero-img {
                 height: 245px;
@@ -218,11 +225,7 @@ html {
         flex-direction: row;
         background-color: aquamarine;
 
-        .post1 {
-            padding-left: 20px;
-            margin-right: 20px;
-        }
-        .post2 {
+        .post {
             padding-left: 20px;
             padding-right: 20px;
         }
@@ -245,9 +248,30 @@ html {
         }
     }
 
+    @include xs {
+        max-width: $screen-xs-max;
+
+        .posts-head {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .recent-posts {
+            flex-direction: column;
+        }
+    }
+
+    @include sm {
+        max-width: $screen-sm-max;
+        
+        .posts-head {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
     @include md {
         max-width: $screen-md-max;
-        display: flex;
         padding: 25px 150px 25px 150px;
     }
 }
@@ -293,6 +317,8 @@ html {
 
         .case-img {
             background-color: blue;
+            display: flex;
+            align-items: center;
 
             .image {
                 background-size: cover;
@@ -304,6 +330,7 @@ html {
 
         .case-text {
             padding-left: 20px;
+            padding-right: 20px;
         }
 
         .case-title {
@@ -345,9 +372,49 @@ html {
         }
     }
 
+    @include xs {
+        max-width: $screen-xs-max;
+
+        .portfolio-head {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .recent-work {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .case {
+                flex-direction: column;
+
+                .case-img {
+                    justify-content: center;
+                    margin-bottom: 20px;
+        
+                    .image {
+                        height: 230px;  
+                        width: 339px;       
+                    }   
+                }
+            }
+        }
+    }
+
+    @include sm {
+        max-width: $screen-sm-max;
+
+        .portfolio-head {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .recent-work {
+            padding-left: 20px;
+        }
+    }
+
     @include md {
         max-width: $screen-md-max;
-        display: flex;
         padding: 25px 150px 25px 150px;
     }
 }

@@ -15,6 +15,8 @@ html {
   margin: 0 auto;
   background-color: aqua;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .hero .navbar {
   background-color: red;
@@ -92,6 +94,10 @@ html {
   }
   .hero .hero-content {
     padding: 25px 50px 25px 50px;
+  }
+  .hero .hero-content .hero-text {
+    padding-left: 100px;
+    padding-right: 100px;
   }
   .hero .hero-content .hero-img {
     height: 245px;
@@ -185,11 +191,7 @@ html {
   flex-direction: row;
   background-color: aquamarine;
 }
-.posts .recent-posts .post1 {
-  padding-left: 20px;
-  margin-right: 20px;
-}
-.posts .recent-posts .post2 {
+.posts .recent-posts .post {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -207,10 +209,30 @@ html {
   font-size: 1.6rem;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 599px) {
+  .posts {
+    max-width: 599px;
+  }
+  .posts .posts-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .posts .recent-posts {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .posts {
+    max-width: 959px;
+  }
+  .posts .posts-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media screen and (min-width: 960px) {
   .posts {
     max-width: 1152px;
-    display: flex;
     padding: 25px 150px 25px 150px;
   }
 }
@@ -252,6 +274,8 @@ html {
 }
 .portfolio .recent-work .case-img {
   background-color: blue;
+  display: flex;
+  align-items: center;
 }
 .portfolio .recent-work .case-img .image {
   background-size: cover;
@@ -261,6 +285,7 @@ html {
 }
 .portfolio .recent-work .case-text {
   padding-left: 20px;
+  padding-right: 20px;
 }
 .portfolio .recent-work .case-title {
   font-size: 3rem;
@@ -294,10 +319,45 @@ html {
   margin: 0 auto;
   background-color: black;
 }
+@media screen and (max-width: 599px) {
+  .portfolio {
+    max-width: 599px;
+  }
+  .portfolio .portfolio-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .portfolio .recent-work {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .portfolio .recent-work .case {
+    flex-direction: column;
+  }
+  .portfolio .recent-work .case .case-img {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .portfolio .recent-work .case .case-img .image {
+    height: 230px;
+    width: 339px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .portfolio {
+    max-width: 959px;
+  }
+  .portfolio .portfolio-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .portfolio .recent-work {
+    padding-left: 20px;
+  }
+}
 @media screen and (min-width: 960px) {
   .portfolio {
     max-width: 1152px;
-    display: flex;
     padding: 25px 150px 25px 150px;
   }
 }
