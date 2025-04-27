@@ -362,4 +362,23 @@ html {
   }
 }
 
+footer {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .logos {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  gap: 35px;
+  margin-bottom: 20px;
+}
+footer p {
+  font-size: 1.6rem;
+}
+
 /*# sourceMappingURL=style.css.map */
