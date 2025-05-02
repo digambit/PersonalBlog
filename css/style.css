@@ -218,6 +218,11 @@ html {
   }
   .posts .recent-posts {
     flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .posts .recent-posts .post {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
@@ -227,6 +232,10 @@ html {
   .posts .posts-head {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .posts .recent-posts {
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 960px) {
@@ -350,6 +359,7 @@ html {
   }
   .portfolio .recent-work {
     padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media screen and (min-width: 960px) {
